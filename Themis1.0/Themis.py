@@ -8,8 +8,8 @@ import copy
 class soft:
     conf_zValue = {80:1.28,90:1.645,95:1.96, 98:2.33, 99:2.58}
 
-    MaxSamples=50
-    SamplingThreshold = 10
+    #MaxSamples=50
+    #SamplingThreshold = 10
     cache = {}
 
     def __init__(self, names, values, num, command, type):
@@ -18,6 +18,12 @@ class soft:
         self.num = copy.deepcopy(num)
         self.type = copy.deepcopy(type)
         self.command = copy.deepcopy(command)
+        self.MaxSamples = 50
+        self.SamplingThreshold = 10
+
+    def set_min_max(self, min, max):
+        self.MaxSamples = max
+        self.SamplingThreshold = min
 
     def getValues(self):
         return self.values
@@ -41,16 +47,14 @@ class soft:
     def printSoftwareDetails(self):
         print "Number of attributes are ", len(self.attr_names),"\n"
         for attr_name in self.attr_names:
-            print "Attribute name is ",attr_name
-            print "Number of values taken by this attribute =",self.getRange(attr_name)
-            print "The different values taken are ",self.getValues(attr_name),"\n"
+            print "Attribute name is ",self.attr_names[attr_name]
+            print "Number of values taken by this attribute =",len(self.values[attr_name])
+            print "The different values taken are ",self.getValues(self.attr_names[attr_name]),"\n"
 
 
     def randomInput (self, I, X, attr):
-        print I
-        print X
-
-        exit()
+        #print I
+        #print X
 
         i=0
         inp = []
@@ -244,7 +248,7 @@ class soft:
         return (tr,fl)
 
 
-    def groupDiscrimination (self, X, confidence, epsilon):
+    def groupDiscrimination(self, X, confidence, epsilon):
         minGroup = float("inf")
         maxGroup = 0
 
@@ -261,6 +265,7 @@ class soft:
             maxPossible*=self.num[i]
             i+=1
         i=0
+
 
         while i < numValues:
             attr = self.decodeValues(i,self.num,X)
@@ -290,11 +295,13 @@ class soft:
                 if r > self.SamplingThreshold:
                     if (self.conf_zValue[int(100*confidence)] * math.sqrt(p*(1-p)*1.0/r) < epsilon):
                         break
+
             if(maxGroup < p):
                 maxGroup = p
             if(minGroup > p):
                 minGroup = p
             i+=1
+
         return maxGroup - minGroup
 
 
