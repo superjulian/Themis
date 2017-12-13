@@ -22,7 +22,9 @@ def main():
     
     point = [0]
     for i in range(1, len(sys.argv)):
+        print i, sys.argv[i]
         if i%2==1:
+            print "continue", i
             continue
         point.append(sys.argv[i])
     print point
@@ -42,6 +44,7 @@ def main():
     node = tree
     while (predicted_label == ""):
         if node.has_next:
+            print node.attributeNum, point
             attribute = point[node.attributeNum]
             if attribute in node.children:
                 node = node.children[attribute]
