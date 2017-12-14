@@ -76,6 +76,7 @@ class soft:
             running_command += " "
             running_command += str(values[i][inp[i]])
             i+=1
+            print running_command
         return (commands.getstatusoutput(running_command)[1] == "1")
 
 

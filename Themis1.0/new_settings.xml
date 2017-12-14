@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<settings>
+	<command>python id3_pickle/id3_predict.py</command>
+	<seed>12345</seed>
+	<max_samples>15</max_samples>
+	<min_samples>3</min_samples>
+	<inputs>
+		<input>
+			<name>workclass</name>
+			<type>categorical</type>
+			<values>
+				<value>State-gov</value>
+				<value>Self-emp-not-inc</value>
+				<value>Private</value>
+				<value>Federal-gov</value>
+				<value>Local-gov</value>
+				<value>?</value>
+				<value>Self-emp-inc</value>
+				<value>Without-pay</value>
+				<value>Never-worked</value>
+			</values>
+		</input>
+		<input>
+			<name>education-num</name>
+			<type>continuousInt</type>
+			<bounds>
+				<lowerbound>1</lowerbound>
+				<upperbound>16</upperbound>
+			</bounds>
+		</input>
+		<input>
+			<name>marital-status</name>
+			<type>categorical</type>
+			<values>
+				<value> Never-married</value>
+				<value> Married-civ-spouse</value>
+				<value> Divorced</value>
+				<value> Married-spouse-absent</value>
+				<value> Separated</value>
+				<value> Married-AF-spouse</value>
+				<value> Widowed</value>
+			</values>
+		</input>
+		<input>
+			<name>sex</name>
+			<type>categorical</type>
+			<values>
+				<value> Male</value>
+				<value> Female</value>
+			</values>
+		</input>
+		<input>
+			<name>hours-per-week</name>
+			<type>continuousInt</type>
+			<bounds>
+				<lowerbound>1</lowerbound>
+				<upperbound>99</upperbound>
+			</bounds>
+		</input>
+		<input>
+			<name>native-country</name>
+			<type>categorical</type>
+			<values>
+				<value> United-States</value>
+				<value> Cuba</value>
+				<value> Jamaica</value>
+				<value> India</value>
+				<value> ?</value>
+				<value> Mexico</value>
+				<value> South</value>
+				<value> Puerto-Rico</value>
+				<value> Honduras</value>
+				<value> England</value>
+				<value> Canada</value>
+				<value> Germany</value>
+				<value> Iran</value>
+				<value> Philippines</value>
+				<value> Italy</value>
+				<value> Poland</value>
+				<value> Columbia</value>
+				<value> Cambodia</value>
+				<value> Thailand</value>
+				<value> Ecuador</value>
+				<value> Laos</value>
+				<value> Taiwan</value>
+				<value> Haiti</value>
+				<value> Portugal</value>
+				<value> Dominican-Republic</value>
+				<value> El-Salvador</value>
+				<value> France</value>
+				<value> Guatemala</value>
+				<value> China</value>
+				<value> Japan</value>
+				<value> Yugoslavia</value>
+				<value> Peru</value>
+				<value> Outlying-US(Guam-USVI-etc)</value>
+				<value> Scotland</value>
+				<value> TrinadadTobago</value>
+				<value> Greece</value>
+				<value> Nicaragua</value>
+				<value> Vietnam</value>
+				<value> Hong</value>
+				<value> Ireland</value>
+				<value> Hungary</value>
+				<value> Holand-Netherlands</value>
+			</values>
+		</input>
+	</inputs>
+</settings>
