@@ -70,12 +70,12 @@ class soft:
         i=0
         actual_inp = []
         running_command = self.command
-
         while i<len(inp):
             actual_inp.append(values[i][inp[i]])
             running_command += " "
             running_command += str(values[i][inp[i]])
             i+=1
+        print(running_command)
         return (commands.getstatusoutput(running_command)[1] == "1")
 
 
@@ -91,10 +91,10 @@ class soft:
 
 
     def discriminationSearch(self,theta, confidence, epsilon, type):
-	Scausal=[]
-	if("causal" in type and "group" in type):
-		Scausal = self.discriminationSearch(theta, confidence, epsilon, "causal")
-	i=0
+        Scausal=[]
+        if("causal" in type and "group" in type):
+            Scausal = self.discriminationSearch(theta, confidence, epsilon, "causal")
+        i=0
         lst = []
         while i<len(self.attr_names):
             lst.append(i)
@@ -125,13 +125,13 @@ class soft:
             for att in d:
                 s.append(self.attr_names[att])
             S.append(s)
-	if("group" in type and "causal" in type):
-		dict={"group":S, "causal":Scausal["causal"]}
+        if("group" in type and "causal" in type):
+            dict={"group":S, "causal":Scausal["causal"]}
         elif("group" in type):
-		dict={"group":S}
-	else:
-		dict={"causal":S}
-	return dict
+            dict={"group":S}
+        else:
+            dict={"causal":S}
+        return dict
 
 
     def getTestSuite(self):

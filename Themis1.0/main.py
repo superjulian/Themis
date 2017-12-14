@@ -53,11 +53,11 @@ if __name__ == '__main__':
     print soft.getComand()
     print soft.attr_names
 
-    D = soft.discriminationSearch(0.2,0.80,0.1,"groupandcausal")
+    #D = soft.discriminationSearch(0.2,0.80,0.1,"groupandcausal")
 
     print  "\n\n\nThemis has completed \n"
     #print "Software discriminates against ", D
     X=[7]
     print soft.groupDiscrimination(X,.99,0.1)
-    print soft.causalDiscrimination(X,.99,0.1)
+    #print soft.causalDiscrimination(X,.99,0.1)
     #print soft.getTestSuite()
