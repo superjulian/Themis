@@ -3,6 +3,13 @@
     <name>SexistSoftware</name>
     <command>python software.py</command>
     <seed>42</seed>
+<<<<<<< HEAD
+    <max_samples>200</max_samples>
+    <min_samples>10</min_samples>
+=======
+    <max_samples>2</max_samples>
+	<min_samples>1</min_samples>
+>>>>>>> a94fa4d1345ff7db3137fa4e7a29dca242ca7370
     <inputs>
         <input>
             <name>Sex</name>
