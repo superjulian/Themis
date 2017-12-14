@@ -32,6 +32,11 @@ def readInput(datafile, labels, points, values):
     while line != "":
         line = line.strip().replace('"', '')
         line = line.split(',')
+        print line
+        label = line[len(line)-1]
+        line = line[0:len(line)-1]
+        line.insert(0, label)
+        print line, "\n"
         for i in range(0, len(line)):
             values[i].add(line[i])
         labels.add(line[0])

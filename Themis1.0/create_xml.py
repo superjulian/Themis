@@ -7,8 +7,11 @@ def get_attributes(filename):
     dataset = open(filename, 'r')
     attr_names = dataset.readline().strip().split(',')[:-1]
     first_line = dataset.readline().strip().split(',')[:-1]
+    print attr_names
 
     for i in range(len(attr_names)):
+        print i
+        print first_line
         print first_line[i]
         try:
             value = float(first_line[i])
