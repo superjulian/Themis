@@ -90,7 +90,6 @@ def main():
 
     k_rules = split_by_legnth_p(new_rules)
 
-
     picke_name = file_name + ".pickle"
     pickle_file = open(picke_name, 'wb')
     pickle.dump(k_rules, pickle_file)

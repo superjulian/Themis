@@ -60,7 +60,8 @@ then pickled for use in rule-mining. The rule parser can be called as
 The final program, "discrim-search.py" is what mines the generated itemsets for the presence of alpha-discriminatory rules. It can be
 invoked with: 
 
-    python3 discrim-search.py pickle_file prot1 prot2 ... protn class_attr > adult-output
+    python3 discrim-search.py pickle_file alpha prot1 prot2 ... protn class_attr > adult-output
 
-where pickle_file is the file with the pickled rules, class_atr is the name of the class attribute (eg. 'decision' in the
-Adult data set), and the arguments in between denote all the protected attributes of interest (eg. 'race', 'sex', etc.).
+where pickle_file is the file with the pickled rules, alpha is the value used for determining alpha-discriminatory rules,
+class_atr is the name of the class attribute (eg. 'decision' in the Adult data set), and the arguments in between denote 
+all the protected attributes of interest (eg. 'race', 'sex', etc.).
