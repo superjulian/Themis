@@ -1,0 +1,4 @@
+This folder contains an id3 program that works with Themis. id3.py is used to train the decision tree on a set of data and save the resulting tree object in data.pkl. It is called in the following format: 
+python id3.py data_file training_percentage random_seed
+
+id3_predict.py is designed to be called by Themis; it takes as input a single instance (a set of characterstics, in the following form: python id3_predict characteristic_1_name characteristic_1_value characteristic_2_name characteristic_2_value), loads the decision tree from data.pkl, and uses it to predict a label for the instance, which is output as a 0 or 1. 

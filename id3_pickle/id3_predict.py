@@ -22,9 +22,9 @@ def main():
     
     point = [0]
     for i in range(1, len(sys.argv)):
-        print i, sys.argv[i]
+        #print i, sys.argv[i]
         if i%2==1:
-            print "continue", i
+            #print "continue", i
             continue
         point.append(sys.argv[i])
     print point
@@ -53,7 +53,11 @@ def main():
         else:
             predicted_label = node.label
     
-    print predicted_label
+    if predicted_label == " <=50K":
+        print 0
+    else:
+        print 1
+   # print predicted_label
 
 if (__name__ == "__main__"):
     main()
