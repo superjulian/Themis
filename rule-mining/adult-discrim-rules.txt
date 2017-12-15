@@ -1,0 +1,7 @@
+[0]  education=HS-grad,marital-status=Never-married,relationship=Own-child,race=White,sex=Female,capital-gain=<=0,hours-per-week=<=40,-> <=50K
+[1]  workclass=Private,fnlgwt=>178356,education-num=<=10,marital-status=Never-married,relationship=Own-child,race=White,sex=Female,-> <=50K
+[2]  education=HS-grad,education-num=<=10,marital-status=Never-married,relationship=Own-child,race=White,sex=Female,capital-gain=<=0,hours-per-week=<=40,-> <=50K
+[3]  education=HS-grad,marital-status=Never-married,relationship=Own-child,race=White,sex=Female,capital-gain=<=0,capital-loss=<=0,hours-per-week=<=40,-> <=50K
+[4]  workclass=Private,fnlgwt=>178356,education-num=<=10,marital-status=Never-married,relationship=Own-child,race=White,sex=Female,capital-loss=<=0,-> <=50K
+[5]  education=HS-grad,education-num=<=10,marital-status=Never-married,relationship=Own-child,race=White,sex=Female,capital-gain=<=0,capital-loss=<=0,hours-per-week=<=40,-> <=50K
+[6]  workclass=Private,fnlgwt=>178356,education-num=<=10,marital-status=Never-married,relationship=Own-child,race=White,sex=Female,capital-gain=<=0,capital-loss=<=0,-> <=50K
