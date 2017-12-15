@@ -132,7 +132,7 @@ def main():
 	global RATE
 	global ITER
 	data_set, NEURONS, RATE = sys.argv[1], int(sys.argv[2]), float(sys.argv[3]),
-	ITER, percent, seed, layers = int(sys.argv[4]), float(sys.argv[5]), int(sys.argv[6]), int(sys.argv[7])
+	ITER, percent, seed = int(sys.argv[4]), float(sys.argv[5]), int(sys.argv[6])
 
 
 	label_list, labels, attribute_values = data_reader.get_info(data_set) #get label list, and dictionary of attribute values
