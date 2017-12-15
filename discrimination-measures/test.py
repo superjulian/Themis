@@ -10,4 +10,5 @@ def main():
 
     print(analyzer.get_avg_consistency(200, 5, .005))
 
-main()
+if (__name__ == "__main__"):
+    main()
