@@ -89,24 +89,6 @@ def train_network(train, test, num_attributes, num_labels, layer_num):
 	net_hidden = tf.matmul(x, w_hidden) + b_hidden
 	out_hidden = tf.sigmoid(net_hidden)
 
-	# #Add first layer to list of layers
-	# first_layer = (w_hidden, b_hidden, net_hidden, out_hidden)
-	# hidden_layers.append(first_layer)
-    #
-	# #Add extra hidden layers as specified by program input
-	# for i in range(1, layer_num):
-	# 	w_next = tf.Variable(tf.truncated_normal([NEURONS, NEURONS], stddev=0.1))
-	# 	b_next = tf.Variable(tf.constant(0.1, shape=[NEURONS]))
-	# 	net_next = tf.matmul(hidden_layers[i - 1][3], w_next) + b_next
-	# 	out_next = tf.sigmoid(net_next)
-    #
-	# 	next_layer = (w_next, b_next, net_next, out_next)
-	# 	hidden_layers.append(next_layer)
-    #
-	# #Make output layer of size num_labels
-	# w_output = tf.Variable(tf.truncated_normal([NEURONS, num_labels], stddev=0.1))
-	# b_output = tf.Variable(tf.constant(0.1, shape=[num_labels]))
-
 	w_output = tf.Variable(tf.truncated_normal([NEURONS, num_labels], stddev=0.1))
 	b_output = tf.Variable(tf.constant(0.1, shape = [num_labels]))
 
@@ -120,8 +102,6 @@ def train_network(train, test, num_attributes, num_labels, layer_num):
 		loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y, logits=net_output))
 
 	backprop = tf.train.AdamOptimizer(RATE).minimize(loss) #Set up backprop with given loss function
-
-	#print(w_output.graph == tf.get_default_graph())
 
 	with tf.Session() as sess:
 		sess.run(tf.global_variables_initializer())
