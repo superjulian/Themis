@@ -64,4 +64,5 @@ invoked with:
 
 where pickle_file is the file with the pickled rules, alpha is the value used for determining alpha-discriminatory rules,
 class_atr is the name of the class attribute (eg. 'decision' in the Adult data set), and the arguments in between denote 
-all the protected attributes of interest (eg. 'race', 'sex', etc.).
+all the protected attributes of interest (eg. 'race', 'sex', etc.). Any discovered rules will be outputed to a file 
+called "discrim-rules.txt". 
