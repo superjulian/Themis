@@ -46,16 +46,14 @@ def predict(num_attributes, num_labels, NEURONS, instance):
 
 
 def main():
-    pickle_file = open('attribute-values.pickle', 'rb')
-    attribute_values = pickle.load(pickle_file)
-    fed_instance = sys.argv[1:]
+    file_name = sys.argv[1]
+    pickle_file = open(file_name, 'rb')
+    attribute_values, num_attributes, neuron_num = pickle.load(pickle_file)
+    fed_instance = sys.argv[2:]
 
     instance = data_reader.one_hot_coding(fed_instance, attribute_values)
 
-    print(len(instance))
-    print(instance)
-
-    result = predict(len(instance), 1, 10, instance)
+    result = predict(num_attributes, 1, neuron_num, instance)
     if result <= .5:
         print(0)
     else:

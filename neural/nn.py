@@ -166,8 +166,9 @@ def main():
 	matrix = create_matrix(predictions, test[1], num_labels) #create confusion matrix from predictions
 	print_to_file(seed, data_set, percent, layers, label_list, matrix) #print confusion matrix to file
 
-	pickle_file = open('attribute-values.pickle', 'wb')
-	pickle.dump(attribute_values, pickle_file)
+	output_data = (attribute_values, num_attributes, NEURONS)
+	pickle_file = open('neural-model.pickle', 'wb')
+	pickle.dump(output_data, pickle_file)
 
 
 main()
