@@ -242,57 +242,6 @@ def main():
     output = open('data.pkl', 'wb')
     pickle.dump(data2save, output)
     output.close()
-#     
-#     if output_tree:
-#         print "Printing tree: "
-#         printTree(tree, "none")
-# 
-#     for point in test_set:
-#         real_label = point[0]
-#         predicted_label = ""
-#         node = tree
-#         while (predicted_label == ""):
-#             if node.has_next:
-#                 attribute = point[node.attributeNum]
-#                 if attribute in node.children:
-#                     node = node.children[attribute]
-#                 else:
-#                     predicted_label = most_common_label
-#             else:
-#                 predicted_label = node.label
-#         confusion_matrix[predicted_label + "," + real_label] += 1
-# 
-#     # Output confusion matrix
-#     output = ""
-#     for label in list_labels:
-#         output += label+","
-#     output += "\n"
-#     for actual in list_labels:
-#         for predicted in list_labels:
-#             output+=str(confusion_matrix[predicted + "," + actual]) + ","
-#         output += actual + "\n"
-# 
-#     data_name = filepath.split(".")[0]
-#     outfile_name = "results_" + data_name + "_" + str(seed) + ".csv"
-#     outfile = open(outfile_name, "w")
-#     outfile.write(output)
-# 
-#     # """  
-#     n = len(test_set)
-#     correct_predictions = 0
-#     for label in list_labels:
-#         correct_predictions += confusion_matrix[label + "," + label]
-#     accuracy = float(correct_predictions) / n
-#     print accuracy
-#       
-#     p = accuracy
-#     root = ((p*(1-p))/n)**.5
-#     root = 1.95*root
-#     print "conf int: (", p- root, ",", p + root, ")"
-    
-        
-        
-       # print output
             
     
 if (__name__ == "__main__"):
