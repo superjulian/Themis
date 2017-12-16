@@ -5,6 +5,6 @@ such as the program to execute, min samples, max samples, a random seed, and the
 attribute, its type and all possible values for that attribute. We wrote a script, "create_xml.py"
 to facilitate the creation of these settings files. It should be invoked as follows: 
 
-   python3 create_xml.py min_samples  max_samples  command  dataset  seed
+    python3 create_xml.py min_samples  max_samples  command  dataset  seed
 
 where dataset is the file used to train the software/decision models in question
